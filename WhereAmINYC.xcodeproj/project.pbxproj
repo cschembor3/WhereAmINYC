@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21822C42795DE4400C2590B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21822C32795DE4300C2590B /* Assets.xcassets */; };
 		D26034D427938902005744BC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26034D327938902005744BC /* NetworkConstants.swift */; };
 		D26034D527938ABC005744BC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26034D327938902005744BC /* NetworkConstants.swift */; };
 		D2845FAA278A23D7009909D9 /* WhereAmINYCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */; };
-		D2845FAE278A23DA009909D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2845FAD278A23DA009909D9 /* Assets.xcassets */; };
 		D2845FB1278A23DA009909D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2845FB0278A23DA009909D9 /* Preview Assets.xcassets */; };
 		D2845FBB278A23DB009909D9 /* WhereAmINYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FBA278A23DB009909D9 /* WhereAmINYCTests.swift */; };
 		D2845FCB278A23DB009909D9 /* WhereAmINYC WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2845FCA278A23DB009909D9 /* WhereAmINYC WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -110,10 +110,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D21822C32795DE4300C2590B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		D26034D327938902005744BC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		D2845FA6278A23D7009909D9 /* WhereAmINYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmINYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmINYCApp.swift; sourceTree = "<group>"; };
-		D2845FAD278A23DA009909D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2845FB0278A23DA009909D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2845FB6278A23DB009909D9 /* WhereAmINYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereAmINYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FBA278A23DB009909D9 /* WhereAmINYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmINYCTests.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 			children = (
 				D2846038278A4A0D009909D9 /* Networking */,
 				D2846030278A45A4009909D9 /* Services */,
-				D2845FAD278A23DA009909D9 /* Assets.xcassets */,
+				D21822C32795DE4300C2590B /* Assets.xcassets */,
 				D284601A278A2436009909D9 /* Model */,
 				D2846021278A2460009909D9 /* View */,
 				D2846022278A2468009909D9 /* ViewModel */,
@@ -517,7 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2845FB1278A23DA009909D9 /* Preview Assets.xcassets in Resources */,
-				D2845FAE278A23DA009909D9 /* Assets.xcassets in Resources */,
+				D21822C42795DE4400C2590B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
