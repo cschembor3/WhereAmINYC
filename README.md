@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./WhereAmINYC%20WatchKit%20App/Assets.xcassets/AppIcon.appiconset/216.png" width="350" title="Where Am I NYC">
+</p>
+
+
 # Where Am I NYC
 
 A simple watchOS app to display which neighborhood/borough of New York City you are currently in.
