@@ -111,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		D21822C32795DE4300C2590B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
+		D218234B279652C400C2590B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D26034D327938902005744BC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		D2845FA6278A23D7009909D9 /* WhereAmINYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmINYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmINYCApp.swift; sourceTree = "<group>"; };
@@ -215,6 +216,7 @@
 		D2845FA8278A23D7009909D9 /* WhereAmINYC */ = {
 			isa = PBXGroup;
 			children = (
+				D218234B279652C400C2590B /* Info.plist */,
 				D2846038278A4A0D009909D9 /* Networking */,
 				D2846030278A45A4009909D9 /* Services */,
 				D21822C32795DE4300C2590B /* Assets.xcassets */,
@@ -910,6 +912,9 @@
 				DEVELOPMENT_TEAM = YD9249X8JH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereAmINYC/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required to determine which neighborhood you are in";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required to determine which neighborhood you are in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -941,6 +946,9 @@
 				DEVELOPMENT_TEAM = YD9249X8JH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhereAmINYC/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required to determine which neighborhood you are in";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required to determine which neighborhood you are in";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

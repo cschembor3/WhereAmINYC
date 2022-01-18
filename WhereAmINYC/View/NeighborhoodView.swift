@@ -26,10 +26,12 @@ struct NeighborhoodView: View {
                     
                     Text(viewModel.neighborhoodText ?? "")
                         .font(.monospaced(.headline)())
+                        .foregroundColor(.white)
                         .padding()
                     
                     Text(viewModel.boroughText ?? "")
                         .font(.monospaced(.body)())
+                        .foregroundColor(.white)
                 }
             }
         }
