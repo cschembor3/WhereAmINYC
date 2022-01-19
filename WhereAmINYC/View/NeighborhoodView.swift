@@ -24,17 +24,25 @@ struct NeighborhoodView: View {
                 
                 VStack {
                     
-                    Text(viewModel.neighborhoodText ?? "")
+                    Text(viewModel.neighborhoodText.orEmpty)
                         .font(.monospaced(.headline)())
                         .foregroundColor(.white)
+                        //.scaledToFit()
                         .padding()
                     
-                    Text(viewModel.boroughText ?? "")
+                    Text(viewModel.boroughText.orEmpty)
                         .font(.monospaced(.body)())
+                        //.minimumScaleFactor(0.1)
                         .foregroundColor(.white)
                 }
             }
         }
+    }
+}
+
+extension Optional where Wrapped == String {
+    var orEmpty: String {
+        return self ?? ""
     }
 }
 
