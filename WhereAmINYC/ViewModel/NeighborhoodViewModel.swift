@@ -45,7 +45,7 @@ import SwiftUI
                          💪self.neighborhoodText = neighborhood.neighborhood
                          💪self.boroughText = neighborhood.borough
                          💪self.errorOccurred = false
-                    } catch is LocationNotInNYCError, is MissingNeighborhoodError {
+                    } catch is LocationNotInNYCError, is MissingNeighborhoodError, is MissingBoroughError {
                         💪self.neighborhoodText = "It looks like you're not in NYC...😞"
                         💪self.boroughText = nil
                         💪self.errorOccurred = true

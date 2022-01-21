@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D21822C42795DE4400C2590B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21822C32795DE4300C2590B /* Assets.xcassets */; };
+		D2278063279A19B700A0F369 /* NeighborhoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2278062279A19B700A0F369 /* NeighborhoodView.swift */; };
 		D26034D427938902005744BC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26034D327938902005744BC /* NetworkConstants.swift */; };
 		D26034D527938ABC005744BC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26034D327938902005744BC /* NetworkConstants.swift */; };
 		D2845FAA278A23D7009909D9 /* WhereAmINYCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */; };
@@ -30,7 +31,6 @@
 		D2846028278A2573009909D9 /* WhereAmINYCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */; };
 		D2846029278A2573009909D9 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D284601B278A2458009909D9 /* LocationResponse.swift */; };
 		D284602C278A2B10009909D9 /* NeighborhoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FDC278A23DD009909D9 /* NeighborhoodView.swift */; };
-		D284602D278A2B19009909D9 /* NeighborhoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FDC278A23DD009909D9 /* NeighborhoodView.swift */; };
 		D2846032278A45BF009909D9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2846031278A45BF009909D9 /* LocationService.swift */; };
 		D2846033278A45BF009909D9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2846031278A45BF009909D9 /* LocationService.swift */; };
 		D2846035278A49A8009909D9 /* NeighborhoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2846034278A49A8009909D9 /* NeighborhoodService.swift */; };
@@ -98,6 +98,7 @@
 /* Begin PBXFileReference section */
 		D21822C32795DE4300C2590B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		D218234B279652C400C2590B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D2278062279A19B700A0F369 /* NeighborhoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborhoodView.swift; sourceTree = "<group>"; };
 		D26034D327938902005744BC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		D2845FA6278A23D7009909D9 /* WhereAmINYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmINYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmINYCApp.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				D2845FCF278A23DD009909D9 /* Assets.xcassets */,
+				D2278062279A19B700A0F369 /* NeighborhoodView.swift */,
 			);
 			path = "WhereAmINYC WatchKit App";
 			sourceTree = "<group>";
@@ -508,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2278063279A19B700A0F369 /* NeighborhoodView.swift in Sources */,
 				D284603B278A4A28009909D9 /* GeocodingApi.swift in Sources */,
 				D2846036278A49A8009909D9 /* NeighborhoodService.swift in Sources */,
 				D26034D527938ABC005744BC /* NetworkConstants.swift in Sources */,
@@ -515,7 +518,6 @@
 				D2845FE3278A23DD009909D9 /* ComplicationController.swift in Sources */,
 				D2846028278A2573009909D9 /* WhereAmINYCApp.swift in Sources */,
 				D2846029278A2573009909D9 /* LocationResponse.swift in Sources */,
-				D284602D278A2B19009909D9 /* NeighborhoodView.swift in Sources */,
 				D2846025278A2573009909D9 /* Neighborhood.swift in Sources */,
 				D2846033278A45BF009909D9 /* LocationService.swift in Sources */,
 				D2846026278A2573009909D9 /* Coordinate.swift in Sources */,

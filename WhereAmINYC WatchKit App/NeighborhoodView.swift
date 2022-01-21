@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WhereAmINYC WatchKit Extension
 //
-//  Created by Connor Schembor on 1/8/22.
+//  Created by Connor Schembor on 1/20/22.
 //
 
 import SwiftUI
@@ -13,27 +13,27 @@ struct NeighborhoodView: View {
     
     var body: some View {
         
-        GeometryReader { geo in
+        VStack {
             
-            VStack {
+            ZStack {
                 
-                Text(viewModel.neighborhoodText.orEmpty)
-                    .font(.monospaced(.headline)())
-                    .foregroundColor(.white)
+                Rectangle()
+                    .fill(viewModel.errorOccurred ? .red : .purple)
+                    .frame(width: 180, height: 100, alignment: .center)
+                    .cornerRadius(10)
                 
-                
-                Text(viewModel.boroughText.orEmpty)
-                    .font(.monospaced(.body)())
-                    .foregroundColor(.white)
+                VStack {
+                    
+                    Text(viewModel.neighborhoodText.orEmpty)
+                        .font(.monospaced(.headline)())
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text(viewModel.boroughText.orEmpty)
+                        .font(.monospaced(.body)())
+                        .foregroundColor(.white)
+                }
             }
-            .frame(
-                width: geo.size.width * 0.8,
-                height: 300,
-                alignment: .center
-            )
-            .background(viewModel.errorOccurred ? .red : .purple)
-            .cornerRadius(10)
-            .position(x: geo.size.width / 2, y: geo.size.height / 2)
         }
     }
 }
