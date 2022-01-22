@@ -18,15 +18,17 @@ struct NeighborhoodView: View {
             VStack {
                 
                 Text(viewModel.neighborhoodText.orEmpty)
-                    .font(.monospaced(.headline)())
+                    .font(.monospaced(.title)())
                     .foregroundColor(.white)
                     .padding()
                 
+                if !viewModel.boroughText.orEmpty.isEmpty {
+                    Text(viewModel.boroughText.orEmpty)
+                        .font(.monospaced(.body)())
+                        .foregroundColor(.white)
+                        .padding()
+                }
                 
-                Text(viewModel.boroughText.orEmpty)
-                    .font(.monospaced(.body)())
-                    .foregroundColor(.white)
-                    .padding()
             }
             .frame(
                 width: geo.size.width * 0.8,
