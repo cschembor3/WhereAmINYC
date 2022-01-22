@@ -20,11 +20,13 @@ struct NeighborhoodView: View {
                 Text(viewModel.neighborhoodText.orEmpty)
                     .font(.monospaced(.headline)())
                     .foregroundColor(.white)
+                    .padding()
                 
                 
                 Text(viewModel.boroughText.orEmpty)
                     .font(.monospaced(.body)())
                     .foregroundColor(.white)
+                    .padding()
             }
             .frame(
                 width: geo.size.width * 0.8,
