@@ -34,7 +34,7 @@ struct NeighborhoodView: View {
                 alignment: .center
             )
             .background(viewModel.errorOccurred ? .red : .purple)
-            .cornerRadius(10)
+            .cornerRadius(20)
             .position(x: geo.size.width / 2, y: geo.size.height / 2)
         }
     }
@@ -54,5 +54,6 @@ struct NeighborhoodView_Previews: PreviewProvider {
                 neighborhoodService: NeighborhoodService(geocodingApi: GeocodingApi())
             )
         )
+.previewInterfaceOrientation(.portrait)
     }
 }
