@@ -10,29 +10,50 @@ import SwiftUI
 struct NeighborhoodView: View {
     
     @ObservedObject var viewModel: NeighborhoodViewModel
+    @State private var isLoading: Bool = false
     
+    init(viewModel: NeighborhoodViewModel) {
+        self.viewModel = viewModel
+        self.isLoading = viewModel.neighborhoodText.orEmpty.isEmpty
+    }
+
     var body: some View {
         
-        VStack {
+        ZStack {
+
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle())
+                .zIndex(1)
+                .foregroundColor(.white)
+                .opacity(self.isLoading ? 1 : 0)
             
-            ZStack {
-                
-                Rectangle()
-                    .fill(viewModel.errorOccurred ? .red : .purple)
-                    .frame(width: 180, height: 100, alignment: .center)
-                    .cornerRadius(10)
+            GeometryReader { geo in
                 
                 VStack {
                     
                     Text(viewModel.neighborhoodText.orEmpty)
-                        .font(.monospaced(.headline)())
+                        .font(.monospaced(.title)())
                         .foregroundColor(.white)
-                        .padding()
+                        .scaledToFit()
+                        .minimumScaleFactor(0.01)
+                        .padding([.leading, .trailing, .top, .bottom], 5)
                     
-                    Text(viewModel.boroughText.orEmpty)
-                        .font(.monospaced(.body)())
-                        .foregroundColor(.white)
+                    if !viewModel.boroughText.orEmpty.isEmpty {
+                        Text(viewModel.boroughText.orEmpty)
+                            .font(.monospaced(.body)())
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    
                 }
+                .frame(
+                    width: geo.size.width,
+                    height: geo.size.height * 0.95,
+                    alignment: .center
+                )
+                .background(viewModel.errorOccurred ? .red : .purple)
+                .cornerRadius(20)
+                .position(x: geo.size.width / 2, y: geo.size.height / 2)
             }
         }
     }
