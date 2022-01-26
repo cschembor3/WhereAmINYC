@@ -48,7 +48,7 @@ struct NeighborhoodView: View {
                 }
                 .frame(
                     width: geo.size.width,
-                    height: geo.size.height * 0.95,
+                    height: geo.size.height * 0.9,
                     alignment: .center
                 )
                 .background(viewModel.errorOccurred ? .red : .purple)
