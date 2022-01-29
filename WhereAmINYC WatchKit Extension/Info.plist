@@ -12,9 +12,5 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Your location is required to determine which neighborhood you are in</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location is required to determine which neighborhood you are in</string>
 </dict>
 </plist>
