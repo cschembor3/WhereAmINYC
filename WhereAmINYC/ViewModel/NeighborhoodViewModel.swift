@@ -30,6 +30,7 @@ import SwiftUI
     
     func setupLocationSubscription() {
         self.locationService.$currLocation
+            .throttle(for: .seconds(3), scheduler: RunLoop.main, latest: true)
             .receive(on: RunLoop.main)
             .sink { [weak self] location in
                 guard let 💪self = self else { return }
