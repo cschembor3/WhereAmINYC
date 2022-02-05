@@ -8,14 +8,23 @@
 import SwiftUI
 
 @main
-struct WhereAmINYCApp: App {
+class WhereAmINYCApp: App {
+    
+    private var viewModel: NeighborhoodViewModel
+    
+    required init() {
+        self.viewModel = NeighborhoodViewModel(
+            locationService: LocationService(),
+            neighborhoodService: NeighborhoodService(geocodingApi: GeocodingApi())
+        )
+        
+        Task { await self.viewModel.reset() }
+    }
+    
     var body: some Scene {
         WindowGroup {
             NeighborhoodView(
-                viewModel: NeighborhoodViewModel(
-                    locationService: LocationService(),
-                    neighborhoodService: NeighborhoodService(geocodingApi: GeocodingApi())
-                )
+                viewModel: self.viewModel
             )
         }
     }

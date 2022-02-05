@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2845FC9278A23DB009909D9"
-            BuildableName = "WhereAmINYC WatchKit App.app"
+            BuildableName = "WhereAmINYC.app"
             BlueprintName = "WhereAmINYC WatchKit App"
             ReferencedContainer = "container:WhereAmINYC.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2845FC9278A23DB009909D9"
-            BuildableName = "WhereAmINYC WatchKit App.app"
+            BuildableName = "WhereAmINYC.app"
             BlueprintName = "WhereAmINYC WatchKit App"
             ReferencedContainer = "container:WhereAmINYC.xcodeproj">
          </BuildableReference>

@@ -13,31 +13,42 @@ struct NeighborhoodView: View {
     
     var body: some View {
         
-        GeometryReader { geo in
+        ZStack {
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                .zIndex(1)
+                .foregroundColor(.white)
+                .opacity(viewModel.isLoading ? 1 : 0)
             
-            VStack {
+            GeometryReader { geo in
                 
-                Text(viewModel.neighborhoodText.orEmpty)
-                    .font(.monospaced(.title)())
-                    .foregroundColor(.white)
-                    .padding()
-                
-                if !viewModel.boroughText.orEmpty.isEmpty {
-                    Text(viewModel.boroughText.orEmpty)
-                        .font(.monospaced(.body)())
+                VStack {
+                    
+                    Text(viewModel.neighborhoodText.orEmpty)
+                        .font(.monospaced(.title)())
                         .foregroundColor(.white)
                         .padding()
+                    
+                    if !viewModel.boroughText.orEmpty.isEmpty {
+                        Text(viewModel.boroughText.orEmpty)
+                            .font(.monospaced(.body)())
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    
                 }
-                
+                .frame(
+                    width: geo.size.width * 0.8,
+                    height: 300,
+                    alignment: .center
+                )
+                .background(viewModel.errorOccurred ? .red : .purple)
+                .cornerRadius(20)
+                .position(x: geo.size.width / 2, y: geo.size.height / 2)
             }
-            .frame(
-                width: geo.size.width * 0.8,
-                height: 300,
-                alignment: .center
-            )
-            .background(viewModel.errorOccurred ? .red : .purple)
-            .cornerRadius(20)
-            .position(x: geo.size.width / 2, y: geo.size.height / 2)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            Task { await viewModel.reset() }
         }
     }
 }

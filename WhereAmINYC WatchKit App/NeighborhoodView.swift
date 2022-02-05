@@ -56,10 +56,10 @@ struct NeighborhoodView: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillEnterForegroundNotification)) { _ in
-            viewModel.reset()
+            Task { await viewModel.reset() }
         }
         .onAppear(perform: {
-            viewModel.reset()
+            Task { await viewModel.reset() }
         })
     }
 }

@@ -3,4 +3,180 @@
    uuid = "F5378695-C4D8-4793-9B86-F3A70C120FB9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D983538-7F08-46C8-B37E-4B9E55A2D2A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "reset()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D983538-7F08-46C8-B37E-4B9E55A2D2A9 - 9445e8aa9714779e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for WhereAmINYC.NeighborhoodViewModel.reset() async -&gt; ()"
+                  moduleName = "WhereAmINYC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connorschembor/Documents/Projects/WhereAmINYC/WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "550">
+               </Location>
+               <Location
+                  uuid = "9D983538-7F08-46C8-B37E-4B9E55A2D2A9 - f7211269daf458a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for WhereAmINYC.NeighborhoodViewModel.reset() async -&gt; ()"
+                  moduleName = "WhereAmINYC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connorschembor/Documents/Projects/WhereAmINYC/WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "9D983538-7F08-46C8-B37E-4B9E55A2D2A9 - f7211269daf458a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for WhereAmINYC.NeighborhoodViewModel.reset() async -&gt; ()"
+                  moduleName = "WhereAmINYC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connorschembor/Documents/Projects/WhereAmINYC/WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "9D983538-7F08-46C8-B37E-4B9E55A2D2A9 - 7a749d14191b3d90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WhereAmINYC.NeighborhoodViewModel.reset() async -&gt; ()"
+                  moduleName = "WhereAmINYC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connorschembor/Documents/Projects/WhereAmINYC/WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3D9458E-1B4A-47DB-8E07-EAF1A6618F75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/View/NeighborhoodView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25D7057D-E00A-46B2-A53D-AC9EC6A3E500"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "refresh(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A1621C3-BBD4-4631-A168-EB527BF2E8DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "refresh(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCE23E0E-4CC4-421D-BA39-2C10C1BC7B37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "refresh(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69992684-1D42-4668-9F87-1F1D05D23999"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/ViewModel/NeighborhoodViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "reset()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CFC022E-D496-4A0C-B3B9-200C7528E113"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereAmINYC/WhereAmINYCApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

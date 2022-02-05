@@ -38,33 +38,42 @@ import SwiftUI
                 guard let x = location?.coordinate.latitude,
                       let y = location?.coordinate.longitude else { return }
                 
-                Task {
-                     do {
-                         let neighborhood = try await 💪self.neighborhoodService.getNeighborhood(
-                            for: Coordinate(x: x, y: y)
-                         )
-                         
-                         💪self.neighborhoodText = neighborhood.neighborhood
-                         💪self.boroughText = neighborhood.borough
-                         💪self.errorOccurred = false
-                         💪self.isLoading = false
-                    } catch is LocationNotInNYCError, is MissingNeighborhoodError, is MissingBoroughError {
-                        💪self.neighborhoodText = "It looks like you're not in NYC...😞"
-                        💪self.boroughText = nil
-                        💪self.errorOccurred = true
-                        💪self.isLoading = false
-                    } catch {
-                        💪self.neighborhoodText = "There was an error getting your location 😬"
-                        💪self.boroughText = nil
-                        💪self.errorOccurred = true
-                        💪self.isLoading = false
-                    }
-                }
+                Task { await 💪self.refresh(for: Coordinate(x: x, y: y)) }
             }
             .store(in: &cancellables)
     }
     
-    func reset() {
+    func reset() async {
+        let currLocation = self.locationService.currLocation
+        guard let x = currLocation?.coordinate.latitude,
+              let y = currLocation?.coordinate.longitude else { return }
+        
+        let currCoords = Coordinate(x: x, y: y)
         self.isLoading = true
+        await self.refresh(for: currCoords)
+    }
+    
+    private func refresh(for coordinates: Coordinate) async {
+        
+        do {
+            let neighborhood = try await self.neighborhoodService.getNeighborhood(
+                for: coordinates
+            )
+            
+            self.neighborhoodText = neighborhood.neighborhood
+            self.boroughText = neighborhood.borough
+            self.errorOccurred = false
+            self.isLoading = false
+        } catch is LocationNotInNYCError, is MissingNeighborhoodError, is MissingBoroughError {
+            self.neighborhoodText = "It looks like you're not in NYC...😞"
+            self.boroughText = nil
+            self.errorOccurred = true
+            self.isLoading = false
+        } catch {
+            self.neighborhoodText = "There was an error getting your location 😬"
+            self.boroughText = nil
+            self.errorOccurred = true
+            self.isLoading = false
+        }
     }
 }
