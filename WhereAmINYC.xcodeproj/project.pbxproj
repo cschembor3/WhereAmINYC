@@ -14,7 +14,7 @@
 		D2845FAA278A23D7009909D9 /* WhereAmINYCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FA9278A23D7009909D9 /* WhereAmINYCApp.swift */; };
 		D2845FB1278A23DA009909D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2845FB0278A23DA009909D9 /* Preview Assets.xcassets */; };
 		D2845FBB278A23DB009909D9 /* WhereAmINYCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FBA278A23DB009909D9 /* WhereAmINYCTests.swift */; };
-		D2845FCB278A23DB009909D9 /* WhereAmINYC WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2845FCA278A23DB009909D9 /* WhereAmINYC WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2845FCB278A23DB009909D9 /* WhereAmINYC.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2845FCA278A23DB009909D9 /* WhereAmINYC.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2845FD0278A23DD009909D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2845FCF278A23DD009909D9 /* Assets.xcassets */; };
 		D2845FD6278A23DD009909D9 /* WhereAmINYC WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2845FD5278A23DD009909D9 /* WhereAmINYC WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2845FE3278A23DD009909D9 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2845FE2278A23DD009909D9 /* ComplicationController.swift */; };
@@ -88,7 +88,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				D2845FCB278A23DB009909D9 /* WhereAmINYC WatchKit App.app in Embed Watch Content */,
+				D2845FCB278A23DB009909D9 /* WhereAmINYC.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +105,7 @@
 		D2845FB0278A23DA009909D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2845FB6278A23DB009909D9 /* WhereAmINYCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereAmINYCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FBA278A23DB009909D9 /* WhereAmINYCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmINYCTests.swift; sourceTree = "<group>"; };
-		D2845FCA278A23DB009909D9 /* WhereAmINYC WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhereAmINYC WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2845FCA278A23DB009909D9 /* WhereAmINYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmINYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FCF278A23DD009909D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2845FD5278A23DD009909D9 /* WhereAmINYC WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WhereAmINYC WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2845FDC278A23DD009909D9 /* NeighborhoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborhoodView.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 			children = (
 				D2845FA6278A23D7009909D9 /* WhereAmINYC.app */,
 				D2845FB6278A23DB009909D9 /* WhereAmINYCTests.xctest */,
-				D2845FCA278A23DB009909D9 /* WhereAmINYC WatchKit App.app */,
+				D2845FCA278A23DB009909D9 /* WhereAmINYC.app */,
 				D2845FD5278A23DD009909D9 /* WhereAmINYC WatchKit Extension.appex */,
 				D2845FEF278A23E1009909D9 /* WhereAmINYC WatchKit AppTests.xctest */,
 			);
@@ -348,7 +348,7 @@
 			);
 			name = "WhereAmINYC WatchKit App";
 			productName = "WhereAmINYC WatchKit App";
-			productReference = D2845FCA278A23DB009909D9 /* WhereAmINYC WatchKit App.app */;
+			productReference = D2845FCA278A23DB009909D9 /* WhereAmINYC.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		D2845FD4278A23DD009909D9 /* WhereAmINYC WatchKit Extension */ = {
@@ -749,12 +749,11 @@
 				DEVELOPMENT_TEAM = YD9249X8JH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WhereAmINYC_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "WhereAmINYC WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cschembor.WhereAmINYC;
 				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cschembor.WhereAmINYC.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WhereAmINYC;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -775,12 +774,11 @@
 				DEVELOPMENT_TEAM = YD9249X8JH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WhereAmINYC_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "WhereAmINYC WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cschembor.WhereAmINYC;
 				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cschembor.WhereAmINYC.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WhereAmINYC;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

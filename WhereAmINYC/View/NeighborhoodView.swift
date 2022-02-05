@@ -56,6 +56,6 @@ struct NeighborhoodView_Previews: PreviewProvider {
                 neighborhoodService: NeighborhoodService(geocodingApi: GeocodingApi())
             )
         )
-.previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.portrait)
     }
 }

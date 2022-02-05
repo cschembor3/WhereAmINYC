@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct NeighborhoodView: View {
     
@@ -53,6 +54,9 @@ struct NeighborhoodView: View {
                 .cornerRadius(20)
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
             }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationWillEnterForegroundNotification)) { _ in
+            viewModel.reset()
         }
         .onAppear(perform: {
             viewModel.reset()
