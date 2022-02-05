@@ -11,9 +11,10 @@ import SwiftUI
 
 @MainActor class NeighborhoodViewModel: ObservableObject {
     
-    @Published var neighborhoodText: String?
-    @Published var boroughText: String?
-    @Published var errorOccurred: Bool = false
+    @Published private(set) var neighborhoodText: String?
+    @Published private(set) var boroughText: String?
+    @Published private(set) var errorOccurred: Bool = false
+    @Published private(set) var isLoading: Bool = false
     
     private var coordinates: Coordinate? = nil
     private var cancellables: Set<AnyCancellable> = Set()
@@ -46,17 +47,24 @@ import SwiftUI
                          💪self.neighborhoodText = neighborhood.neighborhood
                          💪self.boroughText = neighborhood.borough
                          💪self.errorOccurred = false
+                         💪self.isLoading = false
                     } catch is LocationNotInNYCError, is MissingNeighborhoodError, is MissingBoroughError {
                         💪self.neighborhoodText = "It looks like you're not in NYC...😞"
                         💪self.boroughText = nil
                         💪self.errorOccurred = true
+                        💪self.isLoading = false
                     } catch {
                         💪self.neighborhoodText = "There was an error getting your location 😬"
                         💪self.boroughText = nil
                         💪self.errorOccurred = true
+                        💪self.isLoading = false
                     }
                 }
             }
             .store(in: &cancellables)
+    }
+    
+    func reset() {
+        self.isLoading = true
     }
 }

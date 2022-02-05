@@ -10,11 +10,9 @@ import SwiftUI
 struct NeighborhoodView: View {
     
     @ObservedObject var viewModel: NeighborhoodViewModel
-    @State private var isLoading: Bool = false
     
     init(viewModel: NeighborhoodViewModel) {
         self.viewModel = viewModel
-        self.isLoading = viewModel.neighborhoodText.orEmpty.isEmpty
     }
 
     var body: some View {
@@ -25,7 +23,7 @@ struct NeighborhoodView: View {
                 .progressViewStyle(CircularProgressViewStyle())
                 .zIndex(1)
                 .foregroundColor(.white)
-                .opacity(self.isLoading ? 1 : 0)
+                .opacity(viewModel.isLoading ? 1 : 0)
             
             GeometryReader { geo in
                 
@@ -56,6 +54,9 @@ struct NeighborhoodView: View {
                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
             }
         }
+        .onAppear(perform: {
+            viewModel.reset()
+        })
     }
 }
 
