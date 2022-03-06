@@ -30,20 +30,27 @@ struct NeighborhoodView: View {
                 
                 VStack {
                     
-                    Text(viewModel.neighborhoodText.orEmpty)
-                        .font(.monospaced(.title)())
-                        .foregroundColor(.white)
-                        .scaledToFit()
-                        .minimumScaleFactor(0.01)
-                        .padding([.leading, .trailing, .top, .bottom], 5)
-                    
-                    if !viewModel.boroughText.orEmpty.isEmpty {
+                    if viewModel.errorOccurred {
+                        
+                        Text(viewModel.errorText.orEmpty)
+                            .font(.monospaced(.body)())
+                            .foregroundColor(.white)
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.center)
+                    } else {
+                        
+                        Text(viewModel.neighborhoodText.orEmpty)
+                            .font(.monospaced(.title)())
+                            .foregroundColor(.white)
+                            .scaledToFit()
+                            .minimumScaleFactor(0.01)
+                            .padding([.leading, .trailing, .top, .bottom], 5)
+                        
                         Text(viewModel.boroughText.orEmpty)
                             .font(.monospaced(.body)())
                             .foregroundColor(.white)
                             .padding()
                     }
-                    
                 }
                 .frame(
                     width: geo.size.width,

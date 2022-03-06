@@ -24,18 +24,25 @@ struct NeighborhoodView: View {
                 
                 VStack {
                     
-                    Text(viewModel.neighborhoodText.orEmpty)
-                        .font(.monospaced(.title)())
-                        .foregroundColor(.white)
-                        .padding()
-                    
-                    if !viewModel.boroughText.orEmpty.isEmpty {
+                    if viewModel.errorOccurred {
+                        
+                        Text(viewModel.errorText.orEmpty)
+                            .font(.monospaced(.body)())
+                            .foregroundColor(.white)
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.center)
+                    } else {
+                        
+                        Text(viewModel.neighborhoodText.orEmpty)
+                            .font(.monospaced(.title)())
+                            .foregroundColor(.white)
+                            .padding()
+                        
                         Text(viewModel.boroughText.orEmpty)
                             .font(.monospaced(.body)())
                             .foregroundColor(.white)
                             .padding()
                     }
-                    
                 }
                 .frame(
                     width: geo.size.width * 0.8,

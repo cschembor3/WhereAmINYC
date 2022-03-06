@@ -13,6 +13,7 @@ import SwiftUI
     
     @Published private(set) var neighborhoodText: String?
     @Published private(set) var boroughText: String?
+    @Published private(set) var errorText: String?
     @Published private(set) var errorOccurred: Bool = false
     @Published private(set) var isLoading: Bool = false
     
@@ -64,13 +65,18 @@ import SwiftUI
             self.boroughText = neighborhood.borough
             self.errorOccurred = false
             self.isLoading = false
-        } catch is LocationNotInNYCError, is MissingNeighborhoodError, is MissingBoroughError {
-            self.neighborhoodText = "It looks like you're not in NYC...😞"
+        } catch is MissingNeighborhoodError {
+            self.errorText = "It looks like you're on the open sea...Ahoy, captain! 🏴‍☠️"
+            self.boroughText = nil
+            self.errorOccurred = true
+            self.isLoading = false
+        } catch is LocationNotInNYCError, is MissingBoroughError {
+            self.errorText = "It looks like you're not in NYC...😞"
             self.boroughText = nil
             self.errorOccurred = true
             self.isLoading = false
         } catch {
-            self.neighborhoodText = "There was an error getting your location 😬"
+            self.errorText = "There was an error getting your location 😬"
             self.boroughText = nil
             self.errorOccurred = true
             self.isLoading = false
