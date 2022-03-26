@@ -14,16 +14,15 @@ struct LocationResponse: Codable {
 
 extension LocationResponse {
     func toNeighborhoodInfo() throws -> Neighborhood {
+        guard let postalCodeInfo = features[0].context.first(where: { $0.id.contains("postcode") }) else {
+            throw MissingPostalCodeError()
+        }
         guard let neighborhoodInfo = features[0].context.first(where: { $0.id.contains("neighborhood") }) else {
             throw MissingNeighborhoodError()
         }
         
         guard let boroughInfo = features[0].context.first(where: { $0.id.contains("locality")}) else {
             throw MissingBoroughError()
-        }
-        
-        guard let postalCodeInfo = features[0].context.first(where: { $0.id.contains("postcode") }) else {
-            throw MissingPostalCodeError()
         }
 
         return Neighborhood(

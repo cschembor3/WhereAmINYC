@@ -65,12 +65,12 @@ import SwiftUI
             self.boroughText = neighborhood.borough
             self.errorOccurred = false
             self.isLoading = false
-        } catch is MissingNeighborhoodError {
+        } catch is MissingPostalCodeError {
             self.errorText = "It looks like you're on the open sea...Ahoy, captain! 🏴‍☠️"
             self.boroughText = nil
             self.errorOccurred = true
             self.isLoading = false
-        } catch is LocationNotInNYCError, is MissingBoroughError {
+        } catch is LocationNotInNYCError, is MissingBoroughError, is MissingNeighborhoodError {
             self.errorText = "It looks like you're not in NYC...😞"
             self.boroughText = nil
             self.errorOccurred = true
